@@ -19,8 +19,7 @@ services:
       - "5000:5000"
     depends_on:
       - db
-    environment:
-      # Can add more config here if needed
+
     command: python app.py
 
   frontend:
