@@ -39,7 +39,7 @@ pipeline {
 
     post {
         always {
-            sh 'docker compose down || true'   // Cleanup – very important on shared Jenkins agents
+            sh 'docker-compose down || true'   // Cleanup – very important on shared Jenkins agents
         }
     }
 }
