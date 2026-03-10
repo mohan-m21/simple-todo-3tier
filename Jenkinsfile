@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {              // ← This is the BUILD / "compilation equivalent" stage
             steps {
-                sh 'docker compose build'   // ← Here: builds all Docker images
+                sh 'docker-compose build'   // ← Here: builds all Docker images
                                             //    - Copies backend code + requirements.txt
                                             //    - Runs pip install inside the image
                                             //    - Builds frontend Nginx image (static files)
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run') {                // ← Temporary start for verification (common in simple pipelines)
             steps {
-                sh 'docker compose up -d'
+                sh 'docker-compose up -d'
                 sleep 30              // Wait for MySQL + Flask to be ready
             }
         }
