@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Todo 3-Tier App</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; }
+    input { width: 70%; padding: 10px; }
+    button { padding: 10px 15px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 10px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+    .completed { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Todo List (3-Tier Flask + MySQL)</h1>
+
+  <div>
+    <input type="text" id="taskInput" placeholder="Add a new task..." />
+    <button onclick="addTodo()">Add</button>
+  </div>
+
+  <ul id="todoList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
